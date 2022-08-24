@@ -1,0 +1,9 @@
+links primera clase js
+
+
+
+------------------guia definiciones basicas de js----------------------
+
+https://developer.mozilla.org/es/docs/Learn/JavaScript
+
+
