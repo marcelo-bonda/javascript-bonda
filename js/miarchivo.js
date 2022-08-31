@@ -1,8 +1,26 @@
 
 
 
+wildhourse = 0
+pegasusTrail = 0
+vomero = 0
+vaporfly = 0
+let calzado
 
+ //funciones
 
+function efectivo(wildhourse,pegasusTrail,vomero,vaporfly) {
+    precioFinal = calzado - (calzado * 0.15)
+    return precioFinal
+}
+function debito() {
+    precioFinal = calzado - (calzado * 0.10)
+    return precioFinal
+}
+function credito() {
+    precioFinal = calzado + (calzado * 0.10)
+    return precioFinal
+}
 
 let superficie = prompt('en que superficie corres? elegi la opcion \n 1- tierra \n 2-asfalto')
 while ((superficie != '1') && (superficie != '2')) {
@@ -39,7 +57,7 @@ if (superficie === '1') {
 }
 
 }
-if (superficie === '2') {
+else if (superficie === '2') {
     superficie = 'superficieAsfalto'
     primeraOpcionAsfalto = prompt('cuantas veces por semana corres? elegi una opcion\n 1-1 a 3 veces por semana \n 2-3 a 5 veces por semana')
     while ((primeraOpcionAsfalto != '1') && (primeraOpcionAsfalto != '2')) {
@@ -63,31 +81,19 @@ if (superficie === '2') {
         }
     }
 }
-    //funciones
 
-    function efectivo(wildhourse,pegasusTrail,vomero,vaporfly) {
-        precioFinal = calzado - (calzado * 0.15)
-        return precioFinal
-    }
-    function debito() {
-        precioFinal = calzado - (calzado * 0.10)
-        return precioFinal
-    }
-    function credito() {
-        precioFinal = calzado + (calzado * 0.10)
-        return precioFinal
-    }
 
 
 
     //precios llamando funciones de superficie tierra 
     
-    if (segundaOpcionTierra === '1') {
+    if (segundaOpcionTierra === '1'){
         calzado = wildhourse ||pegasusTrail
         efectivo();
         precioFinal= alert('el precio en efectivo es $' + precioFinal)
 
-    } else if (segundaOpcionTierra === '2'){
+    } 
+    else if (segundaOpcionTierra === '2'){
         calzado = wildhourse || pegasusTrail
         debito();
         precioFinal = alert('el precio en debito es $' + precioFinal)
