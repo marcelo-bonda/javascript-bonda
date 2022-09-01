@@ -47,7 +47,7 @@ if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '1')) {
 
     precioFinal = wildhourse.precio - (wildhourse.precio * 0.15)
 
-    recomendacion = alert('Te recomendamos las Nike'+ '' + wildhourse.nombre + '' + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('Te recomendamos las Nike'+ ' ' + wildhourse.nombre + ' ' + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
 
 }
 
@@ -56,7 +56,7 @@ if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '2')) {
 
     precioFinal = wildhourse.precio - (wildhourse.precio * 0.10)
 
-    recomendacion = alert('Te recomendamos las Nike'+''+ wildhourse.nombre + ''+'y su precio pagando en efectivo es de $'+''+ precioFinal)
+    recomendacion = alert('Te recomendamos las Nike'+' '+ wildhourse.nombre + ''+'y su precio pagando con debito es de $'+' '+ precioFinal)
 
 }
 
@@ -64,7 +64,7 @@ if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '3')) {
 
     precioFinal = wildhourse.precio + (wildhourse.precio * 0.35)
 
-    recomendacion = alert('te recomendamos las Nike' + wildhourse.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + wildhourse.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + precioFinal)
 
 }
 
@@ -77,7 +77,7 @@ if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '3')) {
 if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '1')) {
     
     precioFinal= pegasusTrail.precio - (pegasusTrail.precio * 0.15)
-    recomendacion = alert('te recomendamos las Nike' + pegasusTrail.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
 
 }
 
@@ -85,7 +85,7 @@ if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '2')) {
 
     precioFinal= pegasusTrail.precio - (pegasusTrail.precio * 0.10)
 
-    recomendacion = alert('te recomendamos las Nike' + pegasusTrail.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando con debito es de $'+' ' + precioFinal)
 
 }
 
@@ -93,7 +93,7 @@ if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '3')) {
 
     precioFinal= pegasusTrail.precio + (pegasusTrail.precio * 0.35)
 
-    recomendacion = alert('te recomendamos las Nike' + pegasusTrail.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando tarjeta de credito es de $'+' ' + precioFinal)
 
 }
 
@@ -103,7 +103,7 @@ if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '1')) {
 
     precioFinal= vomero.precio - (vomero.precio * 0.10)
 
-    recomendacion = alert('te recomendamos las Nike' + vomero.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
 
 }
 
@@ -112,7 +112,7 @@ if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '2')) {
 
     precioFinal= vomero.precio - (vomero.precio * 0.15)
 
-    recomendacion = alert('te recomendamos las Nike' + vomero.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando con debito es de $'+' ' + precioFinal)
 
 }
 
@@ -120,7 +120,7 @@ if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '3')) {
 
     precioFinal= vomero.precio + (vomero.precio * 0.35)
 
-    recomendacion = alert('te recomendamos las Nike' + vomero.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + precioFinal)
 
 }
 
@@ -130,7 +130,7 @@ if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '1')) {
 
     precioFinal= vaporfly.precio - (vaporfly.precio * 0.15)
 
-    recomendacion = alert('te recomendamos las Nike' + vaporfly.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
 
 }
 
@@ -138,7 +138,7 @@ if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '2')) {
 
     precioFinal= vaporfly.precio - (vaporfly.precio * 0.10)
 
-    recomendacion = alert('te recomendamos las Nike' + vaporfly.nombre + 'y su precio pagando en efectivo es de $' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando con debito es de $'+' ' + precioFinal)
 
 }
 
@@ -146,7 +146,7 @@ if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '3')) {
 
     precioFinal= vaporfly.precio + (vaporfly.precio * 0.35)
 
-    recomendacion = alert('te recomendamos las Nike' + vaporfly.nombre + 'y su precio pagando en efectivo es de $ ' + precioFinal)
+    recomendacion = alert('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + precioFinal)
 
 }
 
