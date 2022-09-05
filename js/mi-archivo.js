@@ -3,7 +3,22 @@ class Zapatilla {
         this.nombre = nombre
         this.precio = precio
     }
+    restarEfectivo(){
+        this.precio= this.precio -(this.precio *0.15)
+    }
+    restaDebito(){
+        this.precio = this.precio -(this.precio *0.10)
+    }
+    sumaCredito(){
+        this.precio = this.precio + (this.precio * 0.35)
+    }
+}
 
+class ventaSugestiva{
+    constructor(producto,precio){
+        this.producto = producto
+        this.precio = precio
+    }
 }
 
 
@@ -11,9 +26,13 @@ const wildhourse = new Zapatilla("wildhourse", 23999);
 const pegasusTrail = new Zapatilla("pegasus trail", 27999);
 const vomero = new Zapatilla("vomero 15", 32999);
 const vaporfly = new Zapatilla("vaporfly next %", 69999);
-let precioFinal
+const medias = new ventaSugestiva("medias",1500);
+const remera = new ventaSugestiva("remera",4000);
+let precioFinal = 0
 let recomendacion
 
+
+let carrito =[]
 
 
 
@@ -45,27 +64,51 @@ while ((medioDePago!='1') && (medioDePago!='2')&&(medioDePago!='3')){
 
 if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '1')) {
 
-    precioFinal = wildhourse.precio - (wildhourse.precio * 0.15)
+    wildhourse.restarEfectivo();
 
-    recomendacion = alert('Te recomendamos las Nike'+ ' ' + wildhourse.nombre + ' ' + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
+    recomendacion = prompt(`Te recomendamos las Nike ${wildhourse.nombre} y su precio pagando en efectivo es de \$ ${wildhourse.precio}Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No`)
+
+    if (recomendacion==='1'){
+        carrito.push(wildhourse)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 
 }
 
 
-if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '2')) {
 
-    precioFinal = wildhourse.precio - (wildhourse.precio * 0.10)
 
-    recomendacion = alert('Te recomendamos las Nike'+' '+ wildhourse.nombre + ''+'y su precio pagando con debito es de $'+' '+ precioFinal)
+else if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '2')) {
 
+    wildhourse.restaDebito();
+
+    recomendacion = prompt('Te recomendamos las Nike'+' '+ wildhourse.nombre + ''+'y su precio pagando con debito es de $'+' '+ wildhourse.precio+'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
+
+    if (recomendacion==='1'){
+        carrito.push(wildhourse)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
-if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '3')) {
+else if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '3')) {
 
-    precioFinal = wildhourse.precio + (wildhourse.precio * 0.35)
+    wildhourse.sumaCredito();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + wildhourse.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + precioFinal)
+    recomendacion = prompt('te recomendamos las Nike'+' ' + wildhourse.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + wildhourse.precio+'.Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
 
+    if (recomendacion==='1'){
+        carrito.push(wildhourse)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
 
@@ -76,78 +119,155 @@ if ((superficie === '1') && (frecuencia === '1') && (medioDePago === '3')) {
 
 if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '1')) {
     
-    precioFinal= pegasusTrail.precio - (pegasusTrail.precio * 0.15)
-    recomendacion = alert('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
+    pegasusTrail.restarEfectivo();
+    recomendacion = prompt('te recomendamos las Nike'+' ' + pegasusTrail.nombre +' '+ 'y su precio pagando en efectivo es de $'+' ' + pegasusTrail.precio +'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
 
+    if (recomendacion==='1'){
+        carrito.push(pegasusTrail)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
-if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '2')) {
+else if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '2')) {
 
-    precioFinal= pegasusTrail.precio - (pegasusTrail.precio * 0.10)
+    pegasusTrail.restaDebito();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando con debito es de $'+' ' + precioFinal)
+    recomendacion = prompt('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando con debito es de $'+' '+pegasusTrail.precio + 'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
 
+    if (recomendacion==='1'){
+        carrito.push(pegasusTrail)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
-if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '3')) {
+else if ((superficie === '1') && (frecuencia === '2') && (medioDePago === '3')) {
 
-    precioFinal= pegasusTrail.precio + (pegasusTrail.precio * 0.35)
+    pegasusTrail.sumaCredito();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando tarjeta de credito es de $'+' ' + precioFinal)
-
+    recomendacion = prompt('te recomendamos las Nike'+' ' + pegasusTrail.nombre + 'y su precio pagando tarjeta de credito es de $'+' ' + pegasusTrail.precio+' ' +'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
+    
+    if (recomendacion==='1'){
+        carrito.push(pegasusTrail)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
 //opcion zapatilla vomero
 
 if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '1')) {
 
-    precioFinal= vomero.precio - (vomero.precio * 0.10)
+    vomero.restarEfectivo();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
+    recomendacion = prompt('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando en efectivo es de $'+' ' + vomero.precio +' '+ 'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
 
+    if (recomendacion==='1'){
+        carrito.push(vomero)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
 
-if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '2')) {
+else if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '2')) {
 
-    precioFinal= vomero.precio - (vomero.precio * 0.15)
+    vomero.restaDebito();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando con debito es de $'+' ' + precioFinal)
+    recomendacion = prompt('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando con debito es de $'+' ' + vomero.precio+' '+'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
 
+    if (recomendacion==='1'){
+        carrito.push(vomero)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
-if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '3')) {
+else if ((superficie === '2') && (frecuencia === '1') && (medioDePago === '3')) {
 
-    precioFinal= vomero.precio + (vomero.precio * 0.35)
+    vomero.sumaCredito();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + precioFinal)
+    recomendacion = prompt('te recomendamos las Nike'+' ' + vomero.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + vomero.precio+' '+'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
 
+    if (recomendacion==='1'){
+        carrito.push(vomero)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
 }
 
 //opcion zapatilla vaporfly
 
 if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '1')) {
 
-    precioFinal= vaporfly.precio - (vaporfly.precio * 0.15)
+    vaporfly.restarEfectivo();
 
-    recomendacion = alert('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando en efectivo es de $'+' ' + precioFinal)
+    recomendacion = prompt('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando en efectivo es de $'+' ' + vaporfly.precio+ ' '+'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
+
+    if (recomendacion==='1'){
+        carrito.push(vaporfly)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
+}
+
+else if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '2')) {
+
+    vaporfly.restaDebito();
+
+    recomendacion = prompt('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando con debito es de $'+' ' + vaporfly.precio+' '+'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
+
+    if (recomendacion==='1'){
+        carrito.push(vaporfly)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
+}
+
+else if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '3')) {
+
+    vaporfly.sumaCredito();
+
+    recomendacion = prompt('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + vaporfly.precio+' '+'Queres agregarlo a tu carrito de compras?\n 1- Si\n 2-No')
+
+    if (recomendacion==='1'){
+        carrito.push(vaporfly)
+        
+    }
+    else if(recomendacion==='2'){
+        alert('muchas gracias por utilizar nuestra herramienta online, volvé cuando quieras!')
+    }
+}
+
+if (recomendacion==='1'){
+    let ventaSugestiva = prompt('queres agregar alguno de estos productos para combinar con tu calzado?\n 1- 3 pares de medias por $1500 \n 2 -remera deportiva por $4000 \n 3 -No deseo agregar ningun producto adicional')
+    if(ventaSugestiva==='1'){
+        carrito.push(medias)
+    }
+    else if(ventaSugestiva==='2'){
+        carrito.push(remera)
+    }
 
 }
 
-if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '2')) {
-
-    precioFinal= vaporfly.precio - (vaporfly.precio * 0.10)
-
-    recomendacion = alert('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando con debito es de $'+' ' + precioFinal)
-
+for(let i=0 ; i<carrito.length; i++){
+    precioFinal = precioFinal + carrito[i].precio
 }
-
-if ((superficie === '2') && (frecuencia === '2') && (medioDePago === '3')) {
-
-    precioFinal= vaporfly.precio + (vaporfly.precio * 0.35)
-
-    recomendacion = alert('te recomendamos las Nike'+' ' + vaporfly.nombre + 'y su precio pagando con tarjeta de credito es de $'+' ' + precioFinal)
-
-}
-
-alert('Esperamos que nuestra recomendación haya sido de ayuda. Hasta la próxima!!')
+alert('el precio final es de $'+' '+ precioFinal)
