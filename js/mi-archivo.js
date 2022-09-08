@@ -31,6 +31,7 @@ const remera = new ventaSugestiva("remera",4000);
 let precioFinal = 0
 let recomendacion
 
+const stock = [wildhourse,pegasusTrail,vomero,vaporfly]
 
 let carrito =[]
 
